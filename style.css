@@ -1,0 +1,80 @@
+/* Aplicar stilo general a tods los elementos */
+*{
+    box-sizing: border-box; /* Esto sirve p q los tamaños se apliquen correctamente cuando tengan un padding o un margin */
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+.contenedor-spinner{
+    /* border: 1px solid red; */
+    width: 150px;
+    height: 150px;
+
+    /* Centrar elementos horizontal y verticalmente: */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.spinner-1{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-top-color: #0f0;
+    border-left-color: #0f0;
+    border-radius: 50%;
+
+    animation: girar-spinner-1 1.2s linear infinite;
+}
+
+.spinner-2{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border: 10px solid transparent;
+    border-top-color: #00f;
+    border-left-color: #00f;
+    border-radius: 50%;
+
+    animation: girar-spinner-2 1.2s linear infinite;
+}
+
+/* ANIMACIONES */
+@keyframes girar-spinner-1{
+    0%{
+        /* animation: linear; */
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        /* animation: linear; */
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes girar-spinner-2{
+    0%{
+        /* animation: linear; */
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        /* animation: linear; */
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
